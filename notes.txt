@@ -1,0 +1,10 @@
+Use git clone to clone the folder into your project dir (anywhere) . In this case, it should be git clone https://github.com/cocodataset/cocoapi.git.
+
+Use terminal to enter the directory, or open a terminal inside the directory (in PythonAPI) and run make. If you use a conda env in this project. Run make after activating the env.
+
+MOST IMPORTANT (at least for me), copy or move the pycocotools folder to the root dir of the project
+
+wherever you want to use pycocotools, import it by using e.g. from pycocotools.cocoeval import COCOeval. DON'T use from cocoapi.PythonAPI.pycocotools.cocoeval import COCOeval
+
+faster-rcnn.pytorch/lib$ rm -rf pycocotools/
+faster-rcnn.pytorch/lib$ mv <PATH_TO_FRESH_GIT_CLONE>/cocoapi/PythonAPI/pycocotools .
